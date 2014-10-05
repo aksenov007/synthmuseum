@@ -1,0 +1,129 @@
+{% load verbose_names %}
+
+<!DOCTYPE html>
+
+<h1>{{ synth }}</h1>
+
+<p>{{ synth.description }}</p>
+
+<table>
+  {% for module in synth.modules.all %}
+  <tr>
+    <td>{{ module.determine }}</td>
+    <td>
+      {% if module.determine == "Oscillator" %}
+        {{ module.oscillator.get_type_display }};
+        Avaliable waveforms:
+        {% for wf in module.oscillator.waveforms.all %}
+          {{ wf }},
+        {% endfor %};
+        LFO: {{ module.oscillator.get_LFO_display }};
+        Sub-oscillator: {{ module.oscillator.sub_oscillator }};
+        Envelope mod pitch: {{ module.oscillator.env_mod_pitch }};
+        LFO mod pitch: {{ module.oscillator.LFO_mod_pitch }};
+        LFO mod pulse: {{ module.oscillator.LFO_mod_pulse }};
+        Key track pitch: {{ module.oscillator.key_track_pitch }}
+      {% endif %}
+      {% if module.determine == "Noise generator" %}
+        Types of noise: {% for noise in module.noisegenerator.name.all %} {{ noise }}, {% endfor %}
+      {% endif %}
+      {% if module.determine == "Envelope generator" %}
+        {{ module.envelopegenerator.get_type_display }}
+      {% endif %}
+      {% if module.determine == "Amplifier" %}
+        {{ module.amplifier.get_type_display }};
+        Key track mod amplifier envelope: {{ module.amplifier.key_track_mod_amp_env }};
+        LFO mod: {{ module.amplifier.LFO_mod }};
+        Velocity mod amplfier: {{ module.amplifier.vel_mod_amp }};
+        Velocity mod attack time: {{ module.amplifier.vel_mod_attack }}
+      {% endif %}
+      {% if module.determine == "Filter" %}
+        {{ module.filter.get_type_display }}; {{ module.filter.get_kind_display }};
+        {% for pole in module.filter.poles.all %}
+          {{ pole }},
+        {% endfor %};
+        Resonance: {{ module.filter.resonance }};
+        Envelope mod cut-off frequency: {{ module.filter.env_mod_cut_off }};
+        Envelope amount: {{ module.filter.env_amount }};
+        LFO mod: {{ module.filter.LFO_mod }};
+        Key track cut-off frequency: {{ module.filter.key_track_cut_off }};
+        Velocity mod cut-off frequency: {{ module.filter.vel_mod_cut_off }};
+        Velocity mod cut-off frequency envelope: {{ module.filter.ve_mod_cut_off_env }}
+      {% endif %}
+      {% if module.determine == "Keyboard" %}
+        Count of keys: {{ module.keyboard.count }};
+        Type of keyboard: {{ module.keyboard.get_type_display }};
+        Velocity: {{ module.keyboard.velocity }};
+        Aftertouch: {{ module.keyboard.aftertouch }};
+        Polyphony: {{ module.keyboard.polyphony }};
+        Pitch control: {{ module.keyboard.pitch }};
+        Modulation control: {{ module.keyboard.modulation }};
+        Transpose control: {{ module.keyboard.transpose }};
+        Portamento control: {{ module.keyboard.portamento }};
+        Zones (for split): {{ module.keyboard.zones }};
+        Arpeggiator: {{ module.keyboard.arpeggiator }};
+        Joystick: {{ module.keyboard.joystick }};
+        Ribbon controller: {{ module.keyboard.ribbon }};
+        Stiffness: {{ module.keyboard.get_stiffness_display }};
+        Hammer action: {{ module.keyboard.hammer_action }};
+        Key size: {{ module.keyboard.get_key_size_display }}
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<table>
+  <tr>
+    <td>{% get_verbose_field_name synth "synthesis_type" %}</td>
+    <td>{{ synth.get_synthesis_type_display }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "protocols" %}</td>
+    <td>
+      {% for proto in synth.protocols.all %}
+      {{ proto }}
+      {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "metronome" %}</td>
+    <td>{{ synth.metronome }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "polyphony" %}</td>
+    <td>{{ synth.polyphony }} voice(s)</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "vocoder" %}</td>
+    <td>{{ synth.vocoder }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "built_in_speaker" %}</td>
+    <td>{{ synth.built_in_speaker }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "display" %}</td>
+    <td>{{ synth.display }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "USB" %}</td>
+    <td>{{ synth.USB }}</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "height" %}</td>
+    <td>{{ synth.height }} cm</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "width" %}</td>
+    <td>{{ synth.width }} cm</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "depth" %}</td>
+    <td>{{ synth.depth }} cm</td>
+  </tr>
+  <tr>
+    <td>{% get_verbose_field_name synth "weight" %}</td>
+    <td>{{ synth.weight }} kg</td>
+  </tr>
+</table>

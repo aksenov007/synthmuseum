@@ -1,0 +1,5 @@
+<ul>
+  {% for synth in object_list %}
+  <li><a href="{% url 'SynthMuseum:detail' synth.manufacturer synth.name %}">{{ synth }}</a></li>
+  {% endfor %}
+</ul>

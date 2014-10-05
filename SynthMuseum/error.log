@@ -1,0 +1,37 @@
+System check identified some issues:
+
+WARNINGS:
+[33;1mSynthMuseum.Amplifier.LFO_mod: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Amplifier.key_track_mod_amp_env: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Amplifier.vel_mod_amp: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Amplifier.vel_mod_attack: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.LFO_mod: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.env_amount: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.env_mod_cut_off: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.key_track_cut_off: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.resonance: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.vel_mod_cut_off: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Filter.vel_mod_cut_off_env: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Oscillator.LFO_mod_pitch: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Oscillator.LFO_mod_pulse_width: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Oscillator.env_mod_pitch: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Oscillator.key_track_pitch: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+[33;1mSynthMuseum.Oscillator.sub_oscillator: (1_6.W002) BooleanField does not have a default value.
+	HINT: Django 1.6 changed the default value of BooleanField from False to None. See https://docs.djangoproject.com/en/1.6/ref/models/fields/#booleanfield for more information.[0m
+
+System check identified 16 issues (0 silenced).
